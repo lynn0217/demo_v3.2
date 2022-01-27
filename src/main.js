@@ -5,6 +5,7 @@ import store from './store'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import '@/styles/index.scss'
+import '@/router/permission.js'
 // import SvgIcon from '@/icons'
 const app = createApp(App)
 // SvgIcon(app)

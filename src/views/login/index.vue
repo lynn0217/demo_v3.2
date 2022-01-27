@@ -34,8 +34,9 @@
 </template>
 <script setup>
 import { ref } from "vue";
-import { login } from "@/api/login";
+import { useStore } from "vuex";
 import { User, Lock, SemiSelect, ArrowDownBold } from "@element-plus/icons-vue";
+const store = useStore();
 const form = ref({
   username: "admin",
   password: "123456"
@@ -60,8 +61,7 @@ const formRef = ref(null);
 const handleLogin = () => {
   formRef.value.validate(async valid => {
     if (valid) {
-      await login(form.value);
-      // alert("submit!");
+      store.dispatch("app/login", form.value);
     } else {
       console.log("error submit!!");
       return false;
