@@ -8,14 +8,14 @@ export default {
   mutations:{
     setToken(state,token) {
       state.token = token
-      localStorage.getItem('token',token)
+      localStorage.setItem('token',token)
     }
   },
   actions:{
     login({commit},userInfo) {
       return new Promise ((resolve,reject)=>{
         loginApi(userInfo).then(res=>{
-          console.log(res);
+          // console.log(res);
           commit('setToken',res.token)
           router.replace('/')
           resolve()

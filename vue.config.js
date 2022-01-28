@@ -73,7 +73,9 @@ module.exports = {
       '/api': {
         target: 'https://lianghj.top:8888/api/private/v1/',
         changeOrigin: true,
+        //重写路径，值是对象
         pathRewrite: {
+          //匹配一个/api的对象，变为空字符串
           '^/api': ''
         }
       }
