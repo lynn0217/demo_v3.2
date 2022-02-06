@@ -1,5 +1,5 @@
 <template>
-  <div class="hamburger-container" @click="toggleClick">
+  <div class="hamburger-container" id="hamburger" @click="toggleClick">
     <el-icon class="hamburger-opened">
       <fold />
     </el-icon>

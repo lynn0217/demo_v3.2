@@ -26,7 +26,7 @@
           <el-icon>
             <component :is="icon[0]"></component>
           </el-icon>
-          <span>{{ it.authName }}</span>
+          <span>{{ $t(`menus.${it.path}`) }}</span>
         </template>
       </el-menu-item>
     </el-sub-menu>

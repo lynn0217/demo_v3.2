@@ -1,11 +1,23 @@
 <template>
   <div class="navbar">
     <Hamburger />
+    <Breadcrumb />
+    <div class="navbar-right">
+      <Driver class="navbar-item" />
+      <Screen class="navbar-item" id="screen" />
+      <Lang class="navbar-item" />
+      <Avatar class="navbar-item" />
+    </div>
   </div>
 </template>
 
 <script setup>
 import Hamburger from "./components/hamburger.vue";
+import Breadcrumb from "./components/breadcrumb.vue";
+import Avatar from "./components/avatar.vue";
+import Lang from "./components/lang.vue";
+import Screen from "./components/screenFull.vue";
+import Driver from "./components/driver";
 </script>
 
 <style lang="scss" scoped>
@@ -34,5 +46,8 @@ import Hamburger from "./components/hamburger.vue";
       cursor: pointer;
     }
   }
+}
+#screen {
+  font-size: 16px;
 }
 </style>
